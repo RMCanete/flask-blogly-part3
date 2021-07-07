@@ -1,0 +1,20 @@
+<!—New Tag Page -->
+
+    {% extends 'base.html' %}
+    {% block title %} Create a tag{% endblock %}
+ 
+    {% block content %}
+      <h1>Create a tag</h1>
+      <form
+        method="POST"> 
+      <div class="new_tag">
+        <label for="tag_name">Name:</label>
+        <input id="name" name="name" placeholder="Enter a tag name">
+      </div>  
+      <div class="new_tag">
+        <button formaction="/tags" class="btn btn-warning" formmethod="GET">Cancel</button>
+        <button class="btn btn-primary" type="submit">Add</button>
+      </div>
+    </form>
+
+    {% endblock %}
